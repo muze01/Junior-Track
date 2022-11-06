@@ -21,11 +21,11 @@ Lets goo 🚀
 
 ## Intro
 
-- Chainlink VRF's are oracles which used to generate random values.
+- Chainlink VRF's are oracles which are used to generate random values.
 - These values are verified using cryptographic proofs.
 - These proofs prove that the results weren't tampered or manipulated by oracle operators, users, miners etc.
 - Proofs are published on-chain so that they can be verified.
-- After there verification is successful they are used by smart contracts which requested randomness.
+- After the verification is successful they are used by smart contracts which requested randomness.
 
 The official Chainlink Docs describe VRFs as:
 
@@ -318,7 +318,7 @@ This function first checks if our contract has Link token before we request for 
     }
 ```
 
-This function was inherited from `VRFConsumerBase`. It is called by `VRFCoordinator` contract after it recieves the randomness from the external world. After recieving the randomness which can be any number in the range of uint256 we decrease its range from `0 to players.length-1` using the mod operaator
+This function was inherited from `VRFConsumerBase`. It is called by `VRFCoordinator` contract after it recieves the randomness from the external world. After recieving the randomness which can be any number in the range of uint256 we decrease its range from `0 to players.length-1` using the mod operator
 
 This selects an index for us and we use that index to retrieve the winner from the players array. It send all the ether in the contract to the winner and emits a `GameEnded event`
 
